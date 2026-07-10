@@ -9,16 +9,13 @@ const port = process.env.PORT || 5011;
 
 connectToMongoDB();
 
-// CORS
 app.use(
   cors({
-    origin: "*",
+    origin: ["http://localhost:5173"],
     methods: ["GET", "POST", "PUT", "DELETE", "OPTIONS"],
     allowedHeaders: ["Content-Type", "auth-token"],
   })
 );
-
-app.options("*", cors());
 
 app.use(express.json());
 

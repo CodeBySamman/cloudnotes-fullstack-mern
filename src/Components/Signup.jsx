@@ -53,7 +53,7 @@ const Signup = () => {
   console.log("ERROR:", error);
   console.log("RESPONSE:", error.response);
   console.log("DATA:", error.response?.data);
-
+console.log("HOST =", host);
   Swal.fire({
     title: "Error!",
     text: error.response?.data?.error || error.message,
