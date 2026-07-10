@@ -11,7 +11,7 @@ connectToMongoDB();
 
 app.use(
   cors({
-    origin: ["https://cloudnotes-fullstack-mern.vercel.app"],
+    origin: ["https://cloudnotes-fullstack-mern-f524mydyy-codebysammans-projects.vercel.app"],
     methods: ["GET", "POST", "PUT", "DELETE", "OPTIONS"],
     allowedHeaders: ["Content-Type", "auth-token"],
   })
