@@ -18,6 +18,12 @@ app.use(
 );
 
 app.use(express.json());
+app.get("/test", (req, res) => {
+  res.json({
+    cors: "working",
+    time: new Date(),
+  });
+});
 
 app.use("/api/auth", authRoutes);
 app.use("/api/notes", notesRoutes);
