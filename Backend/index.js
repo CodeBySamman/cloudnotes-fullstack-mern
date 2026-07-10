@@ -4,12 +4,12 @@ import notesRoutes from './routes/notes.js'
 import express from 'express';
 import cors from 'cors';
 
-
+const port = process.env.PORT || 5011;
 connectToMongoDB()
 const app = express()
 app.use(cors())
 
-const port = 5011
+
 app.use(express.json());
 
 app.use('/api/auth', authRoutes)
@@ -18,7 +18,7 @@ app.use('/api/notes', notesRoutes)
 
 
 app.listen(port, () => {
-  console.log(`CloudNotes backend listening on port http://localhost:${port}`)
-})
+  console.log(`CloudNotes backend listening on port ${port}`);
+});
 
 
