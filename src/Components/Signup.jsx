@@ -50,16 +50,16 @@ const Signup = () => {
         alert(json.error || "Signup Failed");
       }
     } catch (error) {
-      console.log("FULL ERROR:", error.response?.data);
+  console.log("ERROR:", error);
+  console.log("RESPONSE:", error.response);
+  console.log("DATA:", error.response?.data);
 
-      Swal.fire({
-        title: "Error!",
-        text: "Something Went Wrong!",
-        icon: "error",
-        showConfirmButton: false,
-        timer: 1300,
-      });
-    }
+  Swal.fire({
+    title: "Error!",
+    text: error.response?.data?.error || error.message,
+    icon: "error",
+  });
+}
   };
 
   return (
