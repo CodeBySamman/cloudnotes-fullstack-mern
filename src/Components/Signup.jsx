@@ -7,7 +7,7 @@ import axios from "axios";
 const Signup = () => {
   const navigate = useNavigate();
   const host = import.meta.env.VITE_API_URL;
-console.log("HOST =", host);
+
   const {
     register,
     watch,

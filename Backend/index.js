@@ -11,19 +11,12 @@ connectToMongoDB();
 
 app.use(
   cors({
-    origin: [
-      "http://localhost:5173",
-      "https://cloudnotes-fullstack-mern.vercel.app",
-      "https://cloudnotes-fullstack-mern-f524mydyy-codebysammans-projects.vercel.app"
-    ],
-    methods: ["GET", "POST", "PUT", "DELETE", "OPTIONS"],
-    allowedHeaders: ["Content-Type", "auth-token"],
-       credentials: true
+    origin: true,
+    credentials: true,
   })
 );
 
 app.use(express.json());
-
 
 app.use("/api/auth", authRoutes);
 app.use("/api/notes", notesRoutes);
